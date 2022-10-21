@@ -1,10 +1,10 @@
-#To use
+# To use
 
 `git clone https://github.com/0xTranqui/nft-metadata-generator.git`
 
 `cd nft-metadata-generator`
 
-##Create tokenURI metadata:
+## Create tokenURI metadata:
 
 set your inputs on line 35 of tokenURI.js
 

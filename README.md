@@ -1,6 +1,6 @@
 # To use
 
-* note: some of the values (ex: ipfs CIDs) in this are hardcoded and need to be changed for different use cases 
+NOTE: some of the values (ex: ipfs CIDs) in this are hardcoded and need to be changed for different use cases 
 
 `git clone https://github.com/0xTranqui/nft-metadata-generator.git`
 

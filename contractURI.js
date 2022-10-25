@@ -14,9 +14,9 @@ const contractUriMaker = (folderName, contractName, contractDescription, feeReci
     var metadataObject = {
         "name" : `${contractName}`,
         "description" : `${contractDescription}`,
-        "image" : `ipfs://bafybeihklavaypxea2cq3o33vhtbgcvvftky7zegdtnz3d55toulclddta/KASBEEL_REFLEJO_token1.jpg`,
-        "seller_fee_basis_points": 100,
-        "fee_recipient": `${feeRecipient}}`
+        "image" : `ipfs://bafkreiekrwyr4p3va77rnyad6urnfjuoisnwfxwl2zb5adz3q6q5buy4ye`,
+        "seller_fee_basis_points": 1000,
+        "seller_fee_recipient": `${feeRecipient}`
     } 
     var metadataJSON = JSON.stringify(metadataObject);
     fs.writeFile(
@@ -35,4 +35,3 @@ contractUriMaker(
     "Behind-the-scenes content from the music video shoot for 'Refljejo' by Kasbeel",
     "0x153D2A196dc8f1F6b9Aa87241864B3e4d4FEc170"
 );
-

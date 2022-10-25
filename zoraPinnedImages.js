@@ -1,8 +1,3 @@
-// import {arrayOfImageCIDs} from "./zoraPinnedImages";
-var fs = require('fs');
-var path = require('path');
-
-
 const arrayOfImageCIDs = [
     "bafkreiekrwyr4p3va77rnyad6urnfjuoisnwfxwl2zb5adz3q6q5buy4ye",
     "bafkreig7pplxs3qnv4cuscrrdhfjoiixzki3fcaxcwmmytjga76qpvvzjq",
@@ -28,37 +23,4 @@ const arrayOfImageCIDs = [
     "bafkreibvbdobbefko6kkrq4aurig4nyw6xdxcsewq6xdsbiu7g5yrhgjxq",
 ]
 
-const tokenUriMaker = (rounds, folderName) => {
-
-    // creates folder to store metadata in
-    fs.mkdir(
-        path.join(__dirname, `${folderName}`),
-        function(err, result) {
-            if(err) console.log("error", err);
-        }    
-    )
-
-    // creates individual metadata files and stores them in newly created folder
-    for (i = 0; i < rounds; i++) {            
-        for (j = 1; j < 23; j ++) {
-            var metadataObject = {
-                "name" : `Reflejo BTS #${i * 22 + j}`,
-                "description" : `Photo ${j}/22`,
-                "image" : `ipfs://${arrayOfImageCIDs[j-1]}`
-            } 
-            var metadataJSON = JSON.stringify(metadataObject);
-            fs.writeFile(
-                `./${folderName}/${i * 22 + j}`,
-                metadataJSON,
-                // metadataObject,
-                function(err, result) {
-                    if(err) console.log("error", err);
-                }            
-            )                
-        }
-    }
-
-}        
-
-tokenUriMaker(10, "tokenURI");
-
+export default arrayOfImageCIDs;

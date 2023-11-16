@@ -14,4 +14,4 @@ in your terminal, run `node tokenURI.js`
 
 ## Create contractURI metadata:
 set your inputs on line 32 of contractURI.js
-in your terminal, run `node contractURI.js`
+in your terminal, run `node contractURI.js`# nft-metadata-generator
